@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create a new account</title>
+    <link rel="stylesheet" href=",/css/redirect.css">
+</head>
+
+<style>
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    background-color: #0c1022;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main {
+    position: relative;
+    height: 600px;
+    width: 400px;
+    background-color: rgba(0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    overflow: hidden;
+    /* border: white solid; */
+  }
+  
+  .main::before {
+    content: "";
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background: conic-gradient(transparent, transparent, transparent, #d400d4);
+    animation: animate 4s linear infinite;
+    animation-delay: -2s;
+  }
+  
+  .main::after {
+    content: "";
+    position: absolute;
+    height: 700px;
+    width: 700px;
+    background: conic-gradient(transparent, transparent, transparent, #00cff0);
+    animation: animate 4s linear infinite;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .box {
+    position: absolute;
+    inset: 5px;
+    background-color: #0c1022;
+    z-index: 1;
+    border-radius: 16px;
+    /* border: white solid; */
+  }
+  
+  .box-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(40px);
+    /* border: white solid; */
+  }
+  
+  .form h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 25px;
+  }
+  
+  .box-form .form input {
+    padding: 0px;
+    margin: 0px;
+  
+    width: 100%;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background-color: transparent;
+  }
+  
+  .form-box label {
+    position: relative;
+    bottom: 50px;
+  
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    /* pointer-events: none; */
+    transition: 0.6s;
+    /* rotate: 45deg; */
+  }
+  
+  /* -------------------------isko hataya hu */
+  
+  /* .form-box1 input {
+    display: flex;
+    position: relative;
+  
+    color: #fff;
+    bottom: 20px;
+    right: 70px;
+  }
+  
+  .form-box1 label {
+    display: flex;
+    left: 100px;
+    color: #fff;
+    transform: translateY(-67px);
+  } */
+  
+  /* ------------------------Add ------------------------------------- */
+  .form-box-gender {
+    position: relative;
+    display: flex;
+    place-content: center;
+    color: #fff;
+    margin-bottom: 10px;
+    
+  }
+  .form-box-gender label {
+    bottom: 13px;
+    color: #fff;
+  }
+  
+  .form-box input:focus ~ label,
+  .form-box input:not(:placeholder-shown) ~ label {
+    /* display: none; */
+    top: -68px;
+    font-size: 10px;
+  }
+
+  button{
+    height: 40px;
+    width: 90px;
+    font-size: 15px;
+    cursor: pointer ;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:focus{
+    color: #fff;
+    background-color: #0c1022;
+    border: 2px solid #fff;
+}
+
+button:hover{
+    background-color: #d400d4;
+}
+</style>
+
+<body>
+    <div class="main">
+        <div class="box">
+            <div class="box-form">
+                <div class="form">
+                    <h2>Register</h2>
+                    <div class="form-box">
+                        <input type="text"placeholder="">
+                        <label for="">Name</label>
+                    </div>
+                    <div class="form-box">
+                        <input type="email"placeholder=" ">
+                        <label for="">Email</label>
+                    </div>
+                    <div class="form-box">
+                        <input type="tel"placeholder=" ">
+                        <label for="">Number</label>
+                    </div>
+                    <div class="form-box">
+                        <input type="text"placeholder=" ">
+                        <label for="">Address</label>
+                    </div>
+                    <div class="form-box-gender" id="gender-di">
+                        Gender:<input type="radio" name="Gender"id="Male">
+                        <label for="Male">Male</label>
+                    <!-- </div>
+                    <div class="form-box1" id> -->
+                        <input type="radio" name="Gender"id="Female">
+                        <label for="Female">Female</label>
+                    </div>
+                    <div class="form-box">
+                        <input type="password"placeholder=" ">
+                        <label for="">Password</label>
+                    </div>
+                    <button>Sign-In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
